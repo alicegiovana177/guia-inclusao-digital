@@ -1,1 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Inclusão Digital - Descomplicando a Tecnologia</title>
+    
+    <!-- Estilos CSS embutidos -->
+    <style>
+        /* var das cores */
+        :root {
+            --cor-primaria: #0056b3; /* Azul escuro (confiança) */
+            --cor-secundaria: #e9ecef; /* Cinza claro (fundo de seções) */
+            --cor-texto: #333333;
+            --cor-fundo: #ffffff;
+            --cor-alerta: #d9534f; /* Vermelho para a seção de segurança */
+            --cor-sucesso: #5cb85c; /* Verde para serviços */
+        }
 
+        /* reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+            font-size: 18px; 
+        }
+
+        /* cabeçalho principal */
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* navegação principal */
+        nav {
+            background-color: #003d82;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #002754;
+        }
+
+        /* Container principal */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        
+        section {
+            margin-bottom: 4rem;
+            padding-top: 2rem; 
+        }
+
+        section h2 {
+            color: var(--cor-primaria);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--cor-primaria);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .intro-texto {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* cartoes(Cards) */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--cor-secundaria);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--cor-primaria);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .card ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* estilo pros sites públicos */
+        .card-servico {
+            border-left: 5px solid var(--cor-sucesso);
+        }
+        .card-servico h3 {
+            color: #2b7a2b;
+        }
+
+        /* estilo pra segurança */
+        .card-seguranca {
+            border-left: 5px solid var(--cor-alerta);
+            background-color: #fef0f0;
+        }
+        .card-seguranca h3 {
+            color: var(--cor-alerta);
+        }
+
+        /* rodapé */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* responsividade (celulares) */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul li a {
+                border-bottom: 1px solid #0056b3;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr; /* um card por linha no celular */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Bem-vindo ao Mundo Digital</h1>
+        <p>Um guia simples e prático para ajudar você a usar a tecnologia no dia a dia, sem medo e com segurança.</p>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#primeiros-passos">Primeiros Passos</a></li>
+            <li><a href="#servicos-publicos">Serviços Públicos</a></li>
+            <li><a href="#seguranca-digital">Segurança Digital</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+
+        <!-- SEÇÃO 1: Primeiros Passos -->
+        <section id="primeiros-passos">
+            <h2>Primeiros Passos</h2>
+            <p class="intro-texto">Se você está começando agora, não se preocupe! A tecnologia foi feita para ajudar. Aqui estão algumas noções básicas sobre os aparelhos mais comuns.</p>
+            
+            <div class="grid-cards">
+                <div class="card">
+                    <h3>💻 O Computador</h3>
+                    <p>O computador é como uma mesa de trabalho moderna.</p>
+                    <ul>
+                        <li><strong>Mouse:</strong> É a "sua mão" dentro da tela. Mova-o para apontar e clique com o botão esquerdo para selecionar.</li>
+                        <li><strong>Teclado:</strong> Serve para digitar. A tecla grande embaixo (Barra de Espaço) dá espaço entre as palavras. A tecla "Enter" confirma ações.</li>
+                        <li>Não tenha medo de clicar, se algo der errado, sempre há como voltar atrás.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>📱 O Smartphone (Celular)</h3>
+                    <p>O smartphone é um pequeno computador de bolso.</p>
+                    <ul>
+                        <li>Tudo funciona pelo <strong>toque na tela</strong>. Toque suavemente (não precisa apertar com força).</li>
+                        <li><strong>Aplicativos (Apps):</strong> São os programinhas do celular. O ícone verde do telefone serve para ligar, o envelope para e-mails.</li>
+                        <li>Deslize o dedo de baixo para cima para ver mais informações que não couberam na tela.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>🌐 A Internet</h3>
+                    <p>A internet é uma biblioteca mundial invisível.</p>
+                    <ul>
+                        <li><strong>Navegador:</strong> É a "porta" para a internet (como o Google Chrome ou o Safari).</li>
+                        <li>Para achar qualquer coisa, basta abrir o Google, digitar o que procura e apertar a tecla de "lupa" ou "Enter".</li>
+                        <li>Você pode usar a voz! Procure o desenho de um microfone e fale o que quer pesquisar.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: Serviços Públicos -->
+        <section id="servicos-publicos">
+            <h2>Serviços Públicos na Internet</h2>
+            <p class="intro-texto">Hoje em dia, você não precisa mais pegar filas para muitos serviços. O governo disponibiliza quase tudo pelo celular ou computador. Veja como acessar:</p>
+            
+            <div class="grid-cards">
+                <div class="card card-servico">
+                    <h3>Gov.br</h3>
+                    <p>O Gov.br é a sua "identidade digital". Com uma única senha, você acessa quase todos os serviços do governo.</p>
+                    <ul>
+                        <li><strong>Como fazer:</strong> Acesse acesso.gov.br. Você precisará do seu CPF e preencher seus dados pessoais.</li>
+                        <li><strong>Dica:</strong> Anote a sua senha do Gov.br em um caderno seguro na sua casa. Você vai usá-la muito!</li>
+                    </ul>
+                </div>
+
+                <div class="card card-servico">
+                    <h3>Meu SUS Digital</h3>
+                    <p>Substituto do antigo "Conecte SUS", é o aplicativo da saúde.</p>
+                    <ul>
+                        <li><strong>Para que serve:</strong> Ver sua carteira de vacinação, agendar exames (em algumas regiões) e ver histórico de medicamentos.</li>
+                        <li><strong>Como acessar:</strong> Baixe o aplicativo no celular e entre usando a sua senha do <strong>Gov.br</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="card card-servico">
+                    <h3>Meu INSS</h3>
+                    <p>A agência da Previdência Social sem sair de casa.</p>
+                    <ul>
+                        <li><strong>Para que serve:</strong> Pedir aposentadoria, tirar extrato de pagamento, marcar perícia e ver tempo de contribuição.</li>
+                        <li><strong>Como acessar:</strong> Acesse meu.inss.gov.br ou baixe o aplicativo. O acesso também é feito com o seu CPF e a senha do <strong>Gov.br</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: Segurança Digital -->
+        <section id="seguranca-digital">
+            <h2>Segurança Digital</h2>
+            <p class="intro-texto">Assim como trancamos a porta de casa, precisamos tomar cuidados na internet. Siga estas regras de ouro para se proteger de golpes:</p>
+            
+            <div class="grid-cards">
+                <div class="card card-seguranca">
+                    <h3>🔒 Cuidado com Senhas</h3>
+                    <p>A sua senha é a chave do seu cofre digital.</p>
+                    <ul>
+                        <li><strong>Nunca</strong> use datas de nascimento (sua ou de filhos), nem sequências fáceis como "123456".</li>
+                        <li>Não passe suas senhas por mensagens de WhatsApp ou por telefone. Nenhum banco ou órgão do governo pede sua senha.</li>
+                    </ul>
+                </div>
+
+                <div class="card card-seguranca">
+                    <h3>💬 Golpes no WhatsApp</h3>
+                    <p>Fique muito atento a mensagens financeiras.</p>
+                    <ul>
+                        <li>Se um filho ou conhecido pedir dinheiro ou PIX de um <strong>número diferente</strong> alegando que quebrou o celular: <strong>É GOLPE!</strong></li>
+                        <li>Sempre ligue por voz para a pessoa (no número antigo) para confirmar antes de enviar qualquer valor.</li>
+                        <li>Nunca envie códigos numéricos que chegarem por SMS para ninguém.</li>
+                    </ul>
+                </div>
+
+                <div class="card card-seguranca">
+                    <h3>🚨 Links Suspeitos</h3>
+                    <p>O ditado "quando a esmola é demais, o santo desconfia" vale muito na internet.</p>
+                    <ul>
+                        <li>Promoções boas demais, sorteios de carros ou passagens aéreas gratuitas enviados por mensagem geralmente são armadilhas.</li>
+                        <li>Não clique em links desconhecidos. Em caso de dúvida, não clique e pergunte a alguém de confiança.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p><strong>Guia de Inclusão Digital</strong></p>
+        <p>Projeto desenvolvido por Giovana Alice</p>
+        <p>Compartilhe o conhecimento e ajude quem precisa!</p>
+    </footer>
+
+</body>
+</html>
